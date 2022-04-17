@@ -29,6 +29,13 @@ function rotateItem(item, target) {
         rval += rotationSpeed;
         item.setAttribute("data-rotationvalue", String(rval)); 
     } else {
+        imagesID = item.getAttribute("data-imagesid")
+        images = document.getElementById(imagesID)
+        if (rval%360 == 240) {
+            images.style = "display: block;"
+        } else {
+            images.style = "display: none;"
+        }
         clearInterval(spinterval)
     }
 }

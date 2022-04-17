@@ -47,3 +47,7 @@ div.projectListItem {
 h4.projectListItemHeader {
     margin: 3px;
 }
+
+img.projectPicture {
+    width: 400px;
+}
