@@ -7,29 +7,27 @@ for (i=0; i<svgs.length; i++) {
 }
 
 for (i=0; i<dropdownArrows.length;i++) {
+    dropdownArrows[i].setAttribute("data-rotationvalue", String(0));
+    rval = parseInt(dropdownArrows[i].getAttribute("data-rotationvalue"))
     dropdownArrows[i].addEventListener("click", function(event) {
-        spinterval = setInterval(() => rotateItemB(event.target, 0), 50)
+        if (rval%360 < 240) {
+            t = Math.floor(rval/360)*360 + 240
+        } else {
+            t = Math.floor(rval/360)*360 + 420
+        }
+        spinterval = setInterval(() => rotateItem(event.target, t), 75)
     })
 }
+
 const rotationSpeed = 60;
-rotateItemF = item => {
-    rotationValue=0
-    if (rotationValue < 240) {
-        item.style.transform = "rotate(" + rotationValue + "deg)";
-        item.style.webkitTransform = "rotate(" + rotationValue + "deg)";
-        item.style.mozTransform = "rotate(" + rotationValue + "deg)";
-        rotationValue += rotationSpeed; 
-    } else {
-        clearInterval(spinterval)
-    }
-}
-rotateItemB = item => {
-    rotationValue = 180
-    if (rotationValue < 0) {
-        item.style.transform = "rotate(" + rotationValue + "deg)";
-        item.style.webkitTransform = "rotate(" + rotationValue + "deg)";
-        item.style.mozTransform = "rotate(" + rotationValue + "deg)";
-        rotationValue -= rotationSpeed; 
+function rotateItem(item, target) {
+    rval = parseInt(item.getAttribute("data-rotationvalue"))
+    if (rval < target) {
+        item.style.transform = "rotate(" + rval + "deg)";
+        item.style.webkitTransform = "rotate(" + rval + "deg)";
+        item.style.mozTransform = "rotate(" + rval + "deg)";
+        rval += rotationSpeed;
+        item.setAttribute("data-rotationvalue", String(rval)); 
     } else {
         clearInterval(spinterval)
     }
