@@ -43,6 +43,7 @@ div.projectListItem {
     border-radius: 2px;
     border-style: dashed;
     padding: 8px;
+    margin-bottom: 20px;
 }
 h4.projectListItemHeader {
     margin: 3px;
