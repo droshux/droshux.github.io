@@ -53,11 +53,12 @@ img.projectPicture {
     width: 400px;
 }
 
-svg.arrow {
-    animation-name: spinUP;
-}
-
 @keyframes spinUP {
-    from {transform: rotate(0deg)}
-    to {transform: rotate(180deg)}
+    100% {transform: rotate(180deg)}
+}
+@keyframes spinDOWN {
+    100% {transform: rotate(-180deg)}
+}
+@keyframes idle {
+    100% {}
 }
