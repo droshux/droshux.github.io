@@ -53,11 +53,6 @@ img.projectPicture {
     width: 400px;
 }
 
-svg.dropdownArrow {
-    border-style: double;
-    border-width: 3px;
-}
-
 @keyframes spinUP {
     100% {transform: rotate(180deg)}
 }
