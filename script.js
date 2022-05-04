@@ -5,10 +5,8 @@ for (i=0; i<svgs.length; i++) {
         dropdownArrows.push(svgs[i]);
     }
 }
-
-for (i=0; i<dropdownArrows.length;i++) {
-    dropdownArrows[i].setAttribute("data-rotationvalue", String(0));
-    rval = parseInt(dropdownArrows[i].getAttribute("data-rotationvalue"))
+//dropdownArrows.push(document.getElementById("body"))
+for (i = 0; i < dropdownArrows.length; i++) {
     dropdownArrows[i].addEventListener("animationend", function (event) {
         //event.target.style.animation = "idle"
         if (event.target.getAttribute("data-rotated") == "0") {
@@ -18,14 +16,18 @@ for (i=0; i<dropdownArrows.length;i++) {
         }
     })
     dropdownArrows[i].addEventListener("click", function (event) {
-        if (event.target.getAttribute("data-rotated") == "0") {
-            event.target.style.animation = "spinUP 0.5s forwards"
-        } else {
-            event.target.style.animation = "spinUP 0.5s forwards"
+        if (event.target.tagName != "use") {
+            if (event.target.getAttribute("data-rotated") == "0") {
+                event.target.style.animation = "spinUP 0.5s forwards"
+            } else {
+                event.target.style.animation = "spinDOWN 0.5s forwards"
+            }
         }
     })
 }
-
-function rotateItem(item, target) {
-    
-}
+/*uses = document.getElementsByTagName("use")
+for (i = 0; i < uses.length; i++) {
+    console.log(uses[i])
+    var newUse = uses[i].cloneNode(true)
+    uses[i].parentNode.replaceChild(newUse, uses[i])
+}*/
