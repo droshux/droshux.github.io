@@ -11,8 +11,13 @@ for (i = 0; i < dropdownArrows.length; i++) {
         //event.target.style.animation = "idle"
         if (event.target.getAttribute("data-rotated") == "0") {
             event.target.setAttribute("data-rotated", "1")
+            dropdown = document.getElementById(event.target.getAttribute("data-imagesid"))
+            dropdown.style.display = "block";
+            
         } else {
             event.target.setAttribute("data-rotated", "0")
+            dropdown = document.getElementById(event.target.getAttribute("data-imagesid"))
+            dropdown.style.display = "none";
         }
     })
     dropdownArrows[i].addEventListener("click", function (event) {
@@ -23,9 +28,3 @@ for (i = 0; i < dropdownArrows.length; i++) {
         }
     })
 }
-/*uses = document.getElementsByTagName("use")
-for (i = 0; i < uses.length; i++) {
-    console.log(uses[i])
-    var newUse = uses[i].cloneNode(true)
-    uses[i].parentNode.replaceChild(newUse, uses[i])
-}*/
