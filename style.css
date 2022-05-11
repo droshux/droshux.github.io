@@ -64,6 +64,28 @@ div.currentProject {
     padding: 10px;
 }
 
+div.devlogButton {
+    background-color: #C6E7FF;
+    width: 120px;
+    height: 60px;
+    border-width: 4px;
+    border-style: double;
+    border-radius: 8px;
+    border-color: #000000;
+    padding: 5px;
+    text-align: center;
+    display: table;
+}
+
+p.devlogButtonTXT {
+    color: #000000;
+    font-size: larger;
+}
+
+div.devlogButton:hover {
+    background-color: #B2CFE5;
+}
+
 @keyframes spinUP {
     100% {transform: rotate(180deg)}
 }
