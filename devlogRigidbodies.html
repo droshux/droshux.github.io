@@ -12,5 +12,27 @@
             <p class="devlogButtonTXT"><b>BACK</b></p>
         </div>
     </a>
+    <div class="devlogDay">
+        <p style="font-size:larger"><b>8th of May 2022</b></p>
+        <p>
+            I started the project by creating point, triangle and rigidbody classes.
+            The rigidbody has a mesh made up of an array of traingles, and each triangle has an array of 3 points.(along with a few other things)
+            <br /><br />
+            When a rigidbody is instntiated it's center of mass is calculated all points in it's mesh are translated so that the center of mass is at (0,0)
+            local space and a reference to the rigidbody is added to the renderer's list of objects to render.
+            <br /><br />
+            I also wrote a simple function to take txt files and convert them into meshes with this format:
+            <div style="
+    background-color: dimgrey;
+    color: #FFFFFF;
+    padding: 10px;
+    width:150px;
+    border-style:solid;
+    "><pre>(0,0):(1,0):(1,1)
+(0,0):(0,1):(1,1)</pre></div>
+
+            <br /><i>Shown above is the coordinates for a 1x1 square where each line is a different triangle in the mesh</i>
+        </p>
+    </div>
 </body>
 </html>

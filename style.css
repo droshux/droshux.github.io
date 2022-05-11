@@ -48,6 +48,10 @@ div.projectListItem {
 h4.projectListItemHeader {
     margin: 3px;
 }
+a.githubLink {
+    text-decoration: none;
+    font-size: larger;
+}
 
 img.projectPicture {
     width: 400px;
@@ -75,6 +79,7 @@ div.devlogButton {
     padding: 5px;
     text-align: center;
     display: table;
+    margin-left: 40px;
 }
 
 p.devlogButtonTXT {
@@ -84,6 +89,24 @@ p.devlogButtonTXT {
 
 div.devlogButton:hover {
     background-color: #B2CFE5;
+}
+
+div.devlogDay {
+    background-color: #FFC6E7;
+    border-width: 2px;
+    border-style: dashed;
+    border-left-width: 6px;
+    border-left-style: solid;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-radius: 4px;
+    width: 500px;
+    min-height: 600px;
+    padding: 5px;
+    margin: 30px;
+    padding-left: 10px;
+    margin-left: 40px;
+    overflow-wrap: break-word;
 }
 
 @keyframes spinUP {
