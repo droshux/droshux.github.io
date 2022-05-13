@@ -41,9 +41,26 @@
         <p style="font-size:larger"><b>10th of May 2022</b></p>
         <p>
             I used my (limited) knowledge of linear algebra to write a function to rotate the meshes.
-            <br />However I had the issue where the object was shrunk to a microscopic size and squewed.
-            <br />Luckily with a second pair of eyes (thanks Jacob) I was able to locate my stupid typo
+            However I had the issue where the object was shrunk to a microscopic size and squewed.
+            Luckily with a second pair of eyes (thanks Jacob) I was able to locate my stupid typo
             <img src="images/rb/day2-small.png" class="projectPicture" />
+        </p>
+    </div>
+
+    <div class="devlogDay">
+        <p style="font-size:larger"><b>13th of May 2022</b></p>
+        <p>
+            The other issue I was having was that the program would only render 1 or 2 frames.
+            And would render them only after the rest of the program was finished. So I reached out
+            to <i>xirado</i> and <i>Archduke Liamus</i> on the <i>Java Discord API</i> discord server
+            and they gave me the advice to look into creating a buffer with a system built into the 
+            system I was using to create the simulation window (AWT). When I looked into it I found
+            <a href="https://gist.github.com/iiAtlas/4122531" class="githubLink" style="font-size: medium;"><i>iiAtlas</i>'s code to buffer frames</a>
+            That I then proceeded to steal and adapt to my own use. Now the software can animate movement<br />
+            and rotation.
+            <video width="500" height="240" controls>
+                <source src="otherMedia/rb/day3-spin.mp4" type="video/mp4">
+            </video>
         </p>
     </div>
 </body>
