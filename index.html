@@ -1,64 +1,69 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>droshux's website</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body id="body">
-        <svg width="0" height="0">
-            <!-- When using this SVG set the width to 60 and the height to 35 -->
-            <!-- <span><svg width="60" height="35" style="transform: rotate(0)" id="dropdown___" data-rotated=0 data-imagesid="____images"><use href="#dropdownArrow"></use></svg></span> -->
-            <defs>
-                <path id="dropdownArrow" d="
+<head>
+    <title>droshux's website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <svg width="0" height="0">
+        <!-- When using this SVG set the width to 60 and the height to 35 -->
+        <!-- <span><svg width="60" height="35" style="transform: rotate(0)" id="dropdown___" data-rotated=0 data-imagesid="____images"><use href="#dropdownArrow"></use></svg></span> -->
+        <defs>
+            <path id="dropdownArrow" d="
                 M 5 5
                 L 30 30
                 L 55 5
             " stroke="black" stroke-width="5px" stroke-linecap="round" style="fill:none;" />
-            </defs>
-        </svg>
-        <div class="headerSpace">
-            <h1 class="headerText">droshux</h1>
-            <h3 class="headerText">Fast improving amateur software developer...</h3>
-        </div>
-        <div class="introSpace">
-            <h3>Personal Introduction:</h3>
+        </defs>
+    </svg>
+    <div class="headerSpace">
+        <h1 class="headerText">droshux</h1>
+        <h3 class="headerText">Fast improving amateur software developer...</h3>
+    </div>
+    <div class="introSpace">
+        <h3>Personal Introduction:</h3>
+        <p>
+            Hi I'm <b>Hux</b>, I'm a British A-level computer science student who can program with some degree of skill.
+            As you can tell web development is not my strong suit but I am an experienced <i>Googler</i> so theoretically I can solve pretty much any problem with enough time <i>(and cursewords)</i>.
+            <br><br>My favourite language is <b>Java</b> because it's strong typing and strict syntax give me enough structure to keep my code neat (but still allowing elegant code and fancy shenanigans).
+            Its heavy emphasis on <b>OOP</b> allows me to focus on the re-usability and expandability of my code. This allows me to write with a mindset focused on building "tools" for imaginary future developers
+            and myself. <br><br> The real reason I love Java is because I actually like <b>C#</b> however when I switched to <i>Arch Linux</i> it just wouldn't do to be so tied to Microsoft and dotnet.
+            <br><i>Hey did I tell you I use arch linux? Hey where are you going?... Hey!</i>
+        </p>
+    </div>
+    <div class="projectList">
+        <h3 style="margin-left: 4px;">My Noteworthy (completed) Projects:</h3>
+        <div class="projectListItem">
+            <h4 class="projectListItemHeader">Minecraft Variation Tool</h4>
+            <a href="https://github.com/droshux/MCVariationTool" class="githubLink">[Gitgub Link]</a>
             <p>
-                Hi I'm <b>Hux</b>, I'm a British A-level computer science student who can program with some degree of skill. 
-                As you can tell web development is not my strong suit but I am an experienced <i>Googler</i> so theoretically I can solve pretty much any problem with enough time <i>(and cursewords)</i>. 
-                <br><br>My favourite language is <b>Java</b> because it's strong typing and strict syntax give me enough structure to keep my code neat (but still allowing elegant code and fancy shenanigans).
-                Its heavy emphasis on <b>OOP</b> allows me to focus on the re-usability and expandability of my code. This allows me to write with a mindset focused on building "tools" for imaginary future developers
-                and myself. <br><br> The real reason I love Java is because I actually like <b>C#</b> however when I switched to <i>Arch Linux</i> it just wouldn't do to be so tied to Microsoft and dotnet. 
-                <br><i>Hey did I tell you I use arch linux? Hey where are you going?... Hey!</i>
+                A simple CLI to automatically generate Block Percentage Parameters to be pasted into Minecraft Worldedit commands to create nice random patterns.
+                <span><svg width="60" height="35" style="transform: rotate(0)" id="dropdownMCV" data-rotated=0 data-imagesid="MCVimages"><use href="#dropdownArrow"></use></svg></span>
             </p>
-        </div>
-        <div class="projectList">
-            <h3 style="margin-left: 4px;">My Noteworthy (completed) Projects:</h3>
-            <div class="projectListItem">
-                <h4 class="projectListItemHeader">Minecraft Variation Tool</h4>
-                <a href="https://github.com/droshux/MCVariationTool">[Gitgub Link]</a>
-                <p>A simple CLI to automatically generate Block Percentage Parameters to be pasted into Minecraft Worldedit commands to create nice random patterns.
-                <span><svg width="60" height="35" style="transform: rotate(0)" id="dropdownMCV" data-rotated=0 data-imagesid="MCVimages"><use href="#dropdownArrow"></use></svg></span></p>
-                <div id="MCVimages" style="display: none;">
-                    <img src="images/mcv/redComp.png" class="projectPicture" />
-                    <p>Both squares were made using pure red <span style="color: red;">(#FF0000)</span> and 3 blocks but on the left a low roughness was used and on the right a high roughness was used. The differences are apparent but the colours leave a lot to be desired</p>
-                    <img src="images/mcv/bgBlue.png" class="projectPicture" />
-                    <p>This was my attempt at making the background colour of this webpage <span style="color: #C6FFFB;">(#C6FFFB)</span> with a low roughness value but since there are no blocks in minecraft close to that value it is not very accurate</p>
-                </div>
-            </div>
-            <div class="projectListItem">
-                <h4 class="projectListItemHeader">This Website</h4>
-                <a href="https://github.com/droshux/droshuxHome">[Gitgub Link]</a>
-                <p>Very meta! I think this item is self explanatory. Feel free to inspect element and check out out my code or go to the github link above.</p>
+            <div id="MCVimages" style="display: none;">
+                <img src="images/mcv/redComp.png" class="projectPicture" />
+                <p>Both squares were made using pure red <span style="color: red;">(#FF0000)</span> and 3 blocks but on the left a low roughness was used and on the right a high roughness was used. The differences are apparent but the colours leave a lot to be desired</p>
+                <img src="images/mcv/bgBlue.png" class="projectPicture" />
+                <p>This was my attempt at making the background colour of this webpage <span style="color: #C6FFFB;">(#C6FFFB)</span> with a low roughness value but since there are no blocks in minecraft close to that value it is not very accurate</p>
             </div>
         </div>
-        <div class="currentProject">
-            <h3>Current Project</h3>
-            <p>
-                I have recently started working on a Rigidbody physics simulator in Java for my <b>Computer Science A-Level course</b>. I am in early stages of development but so far I have created the 2D mesh
-                rendering system (with rotation) and working on the frame/animation system (which is itself causing rendering issues). I am using my knowledge of maths and physics to try and build the engine from
-                the ground up.
-            </p>
+        <div class="projectListItem">
+            <h4 class="projectListItemHeader">This Website</h4>
+            <a href="https://github.com/droshux/droshuxHome" class="githubLink">[Gitgub Link]</a>
+            <p>Very meta! I think this item is self explanatory. Feel free to inspect element and check out out my code or go to the github link above.</p>
         </div>
-        <script src="script.js"></script>
-    </body>
+    </div>
+    <div class="currentProject">
+        <h3>Current Project</h3>
+        <a href="https://github.com/droshux/rigidbodies" class="githubLink">[Github Link]</a>
+        <p>
+            I have recently started working on a Rigidbody physics simulator in Java for my <b>Computer Science A-Level course</b>. I am using my knowledge of maths and physics to try and build the engine from
+            the ground up.
+        </p>
+        <a href="devlogRigidbodies.html" style="text-decoration: none;"><div class="devlogButton">
+             <p class="devlogButtonTXT"><b>DEVLOG</b></p>
+        </div></a>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>

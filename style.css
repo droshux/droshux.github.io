@@ -48,6 +48,10 @@ div.projectListItem {
 h4.projectListItemHeader {
     margin: 3px;
 }
+a.githubLink {
+    text-decoration: none;
+    font-size: larger;
+}
 
 img.projectPicture {
     width: 400px;
@@ -62,6 +66,46 @@ div.currentProject {
     margin: 60px;
     margin-left: 30px;
     padding: 10px;
+}
+
+div.devlogButton {
+    background-color: #C6E7FF;
+    width: 120px;
+    height: 60px;
+    border-width: 4px;
+    border-style: double;
+    border-radius: 8px;
+    border-color: #000000;
+    padding: 5px;
+    text-align: center;
+    display: table;
+    margin-left: 40px;
+}
+
+p.devlogButtonTXT {
+    color: #000000;
+    font-size: larger;
+}
+
+div.devlogButton:hover {
+    background-color: #B2CFE5;
+}
+
+div.devlogDay {
+    background-color: #FFC6E7;
+    border-width: 2px;
+    border-style: dashed;
+    border-left-width: 6px;
+    border-left-style: solid;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-radius: 4px;
+    width: 500px;
+    padding: 5px;
+    margin: 30px;
+    padding-left: 10px;
+    margin-left: 40px;
+    overflow-wrap: break-word;
 }
 
 @keyframes spinUP {
