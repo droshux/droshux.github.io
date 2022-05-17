@@ -64,5 +64,29 @@
             </video>
         </p>
     </div>
+
+    <div class="devlogDay">
+        <p style="font-size: larger;"><b>17th of May 2022</b></p>
+        <p>
+            Today I used the builder design pattern to create a builder for RigidBody instances.
+            This was because one of my goals is to make it as easy as possible for others to set up physics simulations.
+            By using the Builder design pattern you can now create Rigidbodies by chaining methods to set various properties.
+            This was inspired by minecraft mod KubeJS's system for registering new blocks and items to the game. <br /><br />
+            <i>KubeJS inspiration:</i><br />
+            <img src="images/rb/day3/kubejsExample.png" />
+            <br /><br />
+            <i>My method:</i>
+            <img src="images/rb/day3/myExample.png" />
+            <br /><br />
+            Then I wrote the code that handles basic forces. Each rigidbody has a List of force vectors. Every frame the object
+            is accelerated depending on the forces and then moved. Velocity is carried through betweem frames. 
+            <br /><br />
+            With that I added a simple gravity system and quickly discovered that the screen was being rendered upside down.
+            This was because (0,0) in AWT's coordinate system is <b>top</b> left and I was using <b>bottom</b> left.
+            Luckily when I figured it out it was an easy fix. 
+            <br /><br />
+            My next goal is to add collision and then after that <i>moments...</i>
+        </p>
+    </div>
 </body>
 </html>
