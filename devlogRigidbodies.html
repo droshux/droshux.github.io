@@ -74,10 +74,10 @@
             By using the Builder design pattern you can now create Rigidbodies by chaining methods to set various properties.
             This was inspired by minecraft mod KubeJS's system for registering new blocks and items to the game. <br /><br />
             <i>KubeJS inspiration:</i><br />
-            <img src="images/rb/day3/kubejsExample.png" />
+            <img src="images/rb/day4/kubejsExample.png" />
             <br /><br />
             <i>My method:</i>
-            <img src="images/rb/day3/myExample.png" />
+            <img src="images/rb/day4/myExample.png" />
             <br /><br />
             Then I wrote the code that handles basic forces. Each rigidbody has a List of force vectors. Every frame the object
             is accelerated depending on the forces and then moved. Velocity is carried through betweem frames. 
@@ -88,6 +88,32 @@
             <br /><br />
             My next goal is to add collision and then after that <i>moments...</i>
         </p>
+    </div>
+
+    <div class="devlogDay">
+        <p style="font-size: larger;"><b>19th of May 2022</b></p>
+        After consulting my Physics teacher <i>Dr Reid</i>, we came up with a system for collision detection. Each point in
+        the 2D mesh would create a circle around and check if it would intersect any lines from other rigidbodies. The radius
+        of this circle would be: <b>Speed x Delta</b> <i>(where delta is the time(s) that the frame should take</i>. So the 
+        circle represents all locations the point could move to this frame. Luckily for me AS-Level Maths teaches you a 
+        method to find if a circle intersects a line:
+        <ul>
+            <li>Take the equation of the circle <i>(x-p)&sup2;+(y-q)&sup2;=r&sup2;</i> and substitute in the equation of
+            the line <i>y=mx+c</i></li>
+            <li>Rearange to form a quadratic equation (equal to 0) in terms of x</li>
+            <li>And find the discriminant: &Delta;=b&sup2;-4ac</li>
+            <li>If the discriminant is 0 or more the line and the circle intersect.</li>
+        </ul>
+        Then I used a whiteboard and a lot of algebra to find the generic formula for &Delta; so I could write the code for
+        collision:
+        <img src="images/rb/day5-maths.jpg" width="400px" /><br />
+        Then I mocked it up in Desmos to test that my maths worked:
+        <a href="https://www.desmos.com/calculator/pf5h76tv1o" class="githubLink">[Interactive Desmos Link]</a><br />
+        Unfortunately I got loads of errors and after re-doing my maths multiple times (and fixing some of the errors) when
+        the maths was perfect I was still having issues. This was because I completely forgot to convert some points from local
+        to world place. I felt like a right idiot...
+        <img src="otherMedia/rb/day5-collision.gif" width="480" />
+
     </div>
 </body>
 </html>
