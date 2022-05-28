@@ -115,5 +115,24 @@
         <img src="otherMedia/rb/day5-collision.gif" width="480" />
 
     </div>
+        
+    <div class="devlogDay">
+        <p style="font-size: larger;"><b>24-27th of May 2022</b></p>
+        Implementing collision required re-writing some of my code to use points with Velocity. But then after two tries I managed 
+        to get the points to bounce correctly (independant of eachother...) thanks to <a class="githubLink" href="https://stackoverflow.com/questions/573084/how-to-calculate-bounce-angle?noredirect=1&lq=1">This</a>
+        on <b>stackoverflow</b>. The points were bouncing perfectly...<br><br>
+        Until they didn't. After an <i><b>inconsistent</b></i> number of bounces the points would start to move to the left skewing the shape.
+        <video width="480" height="360" controls>
+            <source src="otherMedia/rb/day6-skew.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <i><ol>
+            <li>Ignore the discord notifications I didn't notice they were there until it was too late</li>
+            <li>Also ignore the vertical distortion that comes from the points moving through eachother. This is <b>enirely intentional.</b></li>
+        </ol></i>
+        After two hours of searching I foundthat the points were moving so fast that their detection radius was big enough to also encompass
+        the internal lines in the rectangular mesh I was using for the floor.<br><img src="images/rb/day6-tsquare.png" width="50px" height="50px"/>
+        
+    </div>
 </body>
 </html>
