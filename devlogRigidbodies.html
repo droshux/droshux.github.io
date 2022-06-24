@@ -139,5 +139,22 @@
         <b><i><u>NOTHING HAPPENED!</u></i></b>
         I'm so stuck...
     </div>
+
+    <div class="devlogDay">
+        <p style="font-size: larger;"><b>26th of June 2022</b></p>
+        So... it's been a month... and I have been struggling with getting objects to collide correctly. After the "points with individual velocities" 
+        method didn't work out I tried using a strange frankentein's monster of <i>line-marching</i> and <i>binary search</i> to snap objects to the surface
+        they are colliding with and then apply a <b>Normal Reaction Force</b> however this came with it's own issues. However when trying to fix these
+        I discovered that: <b><i>My entire colision detection algorithm is broken.</i></b>
+        <br />
+        <br />
+        It fails to account for:
+        <ul>
+            <li>Other objects moving</li>
+            <li>Rotation of any kind</li>
+        </ul>
+        Next I will try <i>stepping throught the time between frames</i> on a canvas level and <i>find the first point where collisions occur</i>. Then I will re-use 
+        some of my old <i>normal reaction</i> code to apply reaction forces that <b>should</b> allow objects to collide accurately.
+    </div>
 </body>
 </html>
