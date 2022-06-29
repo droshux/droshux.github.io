@@ -156,5 +156,25 @@
         Next I will try <i>stepping throught the time between frames</i> on a canvas level and <i>find the first point where collisions occur</i>. Then I will re-use 
         some of my old <i>normal reaction</i> code to apply reaction forces that <b>should</b> allow objects to collide accurately.
     </div>
+
+    <div class="devlogDay">
+        <p style="font-size: larger;"><b>29th of June 2022</b></p>
+        I started work on this new idea but immediately got distracted by implementing moments... however I then started researching <i>Moment of Inertia (<b>I</b>)</i> with the 
+        false assumption in my head that <i>Torque (<b>τ</b>)</i> and <i>Moment (<b>M</b>)</i> were the same thing. However I was wrong! Instead torque can be calculated using:
+        <br><br>
+        <b>τ</b> = <b>r</b> × <b>F</b><br>
+        <i>Where <b>F</b> is the force and <b>r</b> is the position vector of the force</i>
+        <br><br>
+        This eliminates the need for all theat "Force times perpendicular distance" nonsense leaving <b>I</b> the only obstacle stopping me from finding angular acceleration using:
+        <b>τ</b> = <b>I</b> × <b>α</b><br>
+        I found <a href="https://physics.stackexchange.com/questions/493736/moment-of-inertia-for-a-random-polygon">this stack exchange article</a> where <a href="https://physics.stackexchange.com/users/196140/eli">Eli</a>
+        suggested using the <b>second moment of area</b> and so the original poster found that for an arbitrary shape R... <br>
+        <img src="images/rb/day8/shape_diagram.png" />
+        ...the second moment of area <i>(with respect to an arbitrary axis a</i> is defined as:
+        <img src="images/rb/day8/multivariablecalculus.png" />
+        Luckily all the <i>Multi variable calculus</i> had aleady bee done for me and all I need to do is calculate thee two sums and add them together:<br>
+        <img src="images/rb/day8/jxjy.png" /><br>
+        But I think I'll implement this another day...
+    </div>
 </body>
 </html>
