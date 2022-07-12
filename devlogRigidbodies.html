@@ -191,5 +191,23 @@
         <img src="otherMedia/rb/day10-spin-fall.gif" width="500xp" />
         The above is an example of applying a 10N force in the bottom left corner of a 1x1m square.
     </div>
+
+    <div class="devlogDay">
+        <p style="font-size: larger;"><b>12th July 2022</b></p>
+        Unfortunately fo me the <b>time travel</b> idea was terrible. Not only was I unsure about the implementation but it also scaled in <b>O(n&sup2;)</b> time which is totally unnaceptable to be running
+        60 times a second. <br><br>So I decided to actually bother to do research instead of trying to figure it out for myself.
+        Although I didn't have to look far because the first google result for: <i>"collision detection of arbitrary 2D meshes"</i> came up with <a href="https://www.toptal.com/game/video-game-physics-part-ii
+        -collision-detection-for-solid-objects">this amazing guide!</a> <br><br>After reading through this article by <i>Nilson Souto</i> I decided to follow the video game industry's standard system. A two phased
+        approach involving a <b>Broad Phase</b> and a <b>Narrow Phase</b>. The broad phase uses <i>axis aligned bounding boxes</i> to see which objects might be colliding by checking if the bounding boxes 
+        intersect.<br><br> To avoid checking every possible pair of rigidbodies in turn <i>(and thus incurring dreaded O(n&sup2;) time)</i> an algorithm called: <b>Sort and Sweep</b> is used. It projects a 
+        <i>"Shadow"</i> of every bounding box onto an axis marking the beginning and end of each boxes shadow. Then it sweeps along the axis and when it finds a beginning marker it adds it to a list of open shadows,
+        and if it finds an end marker it removes the shadow from the list. At any moment all shadows in the list are overlapping.
+        A diagram and my implementation are below:
+        <img src="images/rb/day11/day11-sortandsweep-diagram.png" width="500px" />
+        <img src="images/rb/day11/day11-sortandsweep-code.png" width="500px" />
+        I did this for both the X and Y axis and if A pair of objects are intersecting on both axes then the bounding boxes are overlapping. This stops long flat objects <i>(for example a floor/platform)</i> from being
+        considered for collision with any object above and below them. This final step in the broad phase does scale in O(n&sup2;) time but hopefully it is not computationally expensive enough to cause problems...
+        <img src="images/rb/day11/day11-combineaxes.png" width="500px" />
+    </div>
 </body>
 </html>
