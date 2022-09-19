@@ -208,5 +208,25 @@
         considered for collision with any object above and below them. This final step in the broad phase does scale in O(n&sup2;) time but hopefully it is not computationally expensive enough to cause problems...
         <img src="images/rb/day11/day11-combineaxes.png" width="500px" />
     </div>
+
+    <div class="devlogDay">
+        <p style="font-size: larger;"><b>19th September 2022</b></p>
+        It has <i>once again</i> been a long time without any updates...
+        This time I spent my time:
+        <ol>
+            <li>Trying to get my head around the <b>Gilbert-Johson-Keerthi distance algorithm</b> for my narrow phase collision detection</li>
+            <li>Realising that it wouldn't fit my purpose anyway because it requires convex polygons and although I could use the individual
+                traingles that make up my meshes that would still scale in <b>O(n&sup2;)</b>.
+            </li>
+        </ol>
+        However during the summer I also spent a week's <i>work experience at Hewlett Packard Enterprise</i> and while there I talked to a full
+        time software developer and they suggested iterating space rather than iterating over time like I did in time travel.
+        And so I then wrote a complicated system of <b>daemons</b> that searches through a space in a grid and if it finds an overlap between two
+        rigidbodies at a point it then creates a child that will search the area around that point in the next generation 
+        <i>(for a given number of generations)</i>
+
+        <img src="images/rb/day12/day12-daemon.png" width="500px" />
+        <image src="images/rb/day12/day12-narrow.png" width="500px" />
+    </div>
 </body>
 </html>

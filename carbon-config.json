@@ -5,7 +5,7 @@
     "backgroundImageSelection": null,
     "backgroundMode": "color",
     "backgroundColor": "rgba(255,198,231,1)",
-    "dropShadow": true,
+    "dropShadow": false,
     "dropShadowOffsetY": "20px",
     "dropShadowBlurRadius": "68px",
     "theme": "shades-of-purple",
