@@ -233,5 +233,19 @@
         further than a few pixels into eachother before collision being accounted for. And so we can find the clusters and use them to approximate
         the points of collision which we can use later :)
     </div>
+
+    <div class="devlogDay">
+        <p style="font-size: larger;"><b>4th October 2022</b></p>
+        So instead of using OPTICS (which requires me to implement an R-tree etc etc) I have decided to use the much simpler: <i>K-means</i>
+        algorithm that divides the given points into <b>K</b> clusters. <br/>
+        Here are the results I got for some intentionally clustered data:<br/>
+        <img src="images/rb/day13/day13-results.png" width="250px"/><br/>
+        However in the actual collision detector there won't be the same number of clusters every time so next I plan to implement
+        the algorithm that procedurally decides <b>K</b><br/><br/>
+        In case you are interested here is the main part of the code:
+        <img src="images/rb/day13/day13-kmeans.png" width="500px" /><br/>
+        The error correction function simply takes in a value <b>l</b> and deletes all points more than <b>l</b> times the mean distance
+        away from the centroid.
+    </div> 
 </body>
 </html>
