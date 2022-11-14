@@ -265,6 +265,9 @@
         <p style="font-size: larger"><b>7th November 2022</b></p>
         After a lot of de-bugging out K-means cluster analysis is working on artificial data. But before I test it
         on actual collision data I want to make sure the data I'm getting is evenly distributed across the area that is overlapping.
+        <img src="images/rb/day14-search-fail.png" width="250px"/><br>
+        As you can see the points that the algorithm has found (red) are in no way distributed correctly. Sometimes it doesn't even 
+        find any points in the right side of the object. So a total re-write of my spatial search algorithm is needed.
     </div>
 </body>
 </html>
