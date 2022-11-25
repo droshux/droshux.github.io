@@ -269,5 +269,16 @@
         As you can see the points that the algorithm has found (red) are in no way distributed correctly. Sometimes it doesn't even 
         find any points in the right side of the object. So a total re-write of my spatial search algorithm is needed.
     </div>
+
+    <div class="devlogDay">
+        <p style="font-size: larger"><b>7th November 2022</b></p>
+        Good news! I found the issue that was causing the inconsistencies! The function that was checking if a triangle contained a
+         point was returning incorrect results due to a floating point error (despite the fact that I was using <i>doubles</i>) and
+        now I am coming up against a fundamental flaw in my algorithm...<br>
+        <img src="images/rb/day15-search-impossible.png" /><br>
+        These red lines represent the y divisions <i>(when using a search breadth of 10)</i> but as you can see the area of overlap
+         is completely missed. It is pretty much impossible to catch every possible collision without having so much depth that it
+        makes the algorithm prohibitively slow.
+    </div>
 </body>
 </html>
